@@ -1,0 +1,300 @@
+/*
+    Proyecto Final
+    Estudiantes:
+        Piola Romina Gisele y 
+        Piola Rina Griselda.
+*/
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Robot', sans-serif;
+    margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+
+img{
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    padding: 5px;
+}
+
+.column{
+    flex: 25%;
+    padding: 5px;
+}
+
+.column img{
+    margin-top: 5%;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245,245,245);
+}
+
+header .logo{
+    margin: 0;
+    padding:25px 30 px;
+    font-weight: bold;
+    color: darkblue;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex ;
+    flex-direction: column ;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold ;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(60, 235, 89);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/public/img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#Nosotros .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/public/img/paloymasa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;   
+}
+
+#Servicios {
+    background-color: grey;
+    color: white;
+}
+
+#Servicios .container{
+    padding: 100px 0px;
+}
+
+#Servicios h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#Servicios p{
+    display: none;
+}
+
+#Servicios .carta{
+    background-position: center center;
+    background-size:cover;
+    padding: 50px;
+}
+
+.carta:first-child{
+       background-image: linear-gradient(
+           0deg,
+           rgba(0,0,0,0.5),
+           rgba(0,0,0,0.5)
+       )
+    ,url("/public/img/mesadulce.jpg");
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/public/img/mesasalada.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/public/img/alfajores.jpg");
+}
+
+#Contacto .container{
+    text-align: center;
+    padding: 150px 12px;
+}
+
+#Contacto li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+footer{
+    background-color: hsl(180, 3%, 39%);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: whitesmoke;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media(min-width: 720px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #Nosotros .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #Nosotros .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #Nosotros h2{
+        margin-top: 0px
+        ;
+    }
+
+    #Nosotros .img-container{
+        background-image: url("/public/img/paloymasa.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #Servicios .Servicios{
+        display: flex;
+        justify-content: center;
+    }
+
+    #Servicios p{
+        display: block;
+        margin-bottom: 30 px;
+    }
+
+    #Servicios h3{
+        margin-top: 0;
+    }
+
+    #Servicios .carta{
+        padding: 50px;
+        background-size: 95% 98%;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: rgb(50,50,50);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5)
+    }
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("/public/img/mesadulce.jpg");
+    }
+
+    
+    
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5)
+            rgba(0,0,0,0.5)
+        )
+        ,url("/public/img/mesasalada.jpg");
+    }
+    
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5)
+            rgba(0,0,0,0.5)
+        )
+        ,url("/public/img/alfajores.jpg");
+    }
+}
+
+
+
